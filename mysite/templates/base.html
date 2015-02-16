@@ -1,0 +1,71 @@
+{% load cms_tags staticfiles sekizai_tags menu_tags %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% block title %}保定蓝键橡胶机带有限公司{% endblock title %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% render_block "css" %}
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+  </head>
+  <body>
+    {% cms_toolbar %}
+    <div class="container-fluid" id="landing">
+    </div>
+    <div class="container-fluid">
+      <div class="navbar navbar-default" id="topnav" role="navigation">
+        <div class="navbar-collapse collapse col-md-8 col-md-offset-2">
+          <ul class="nav navbar-nav">
+            {% show_menu 0 1 100 100 "menu.html" %}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+<div class="main">
+    <div class="container" id="maincontent">
+    {% static_placeholder "slider" %}
+    <dic class="row">
+      <div class="col-md-2 side_menu">
+        {% static_placeholder "side_menu" %}
+      </div>
+      <div class="col-md-10">
+   {% block content %}
+    {% endblock content %}
+      </div>
+    </dic>
+
+    </div>
+    <div class="container" id="partner">
+    <h2 class="text-muted">合作伙伴</h2>
+    <div class="partner_logo">
+      {% static_placeholder "partner" %}
+    </div>
+    </div>
+<div class="container-fluid" id="footer">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        河北蓝箭橡胶机带有限公司专业提供<b>尼龙输送带、耐高温输送带、耐热输送带、花纹输送带</b>等产品
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-1 col-md-offset-4">
+        <img src="{% static 'image/logo.jpg' %}">
+      </div>
+      <div class="col-md-4">
+         Copyright @ 2015 河北蓝箭橡胶机带有限公司<br/>
+         联系电话：0312-8349136   8348366  传真：0312-8349773<br/>
+         联系地址：河北省博野县大齐橡胶工业区<br/>
+         冀ICP备05027928号<br/>
+      </div>
+    </div>
+
+</div>
+</div>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    {% render_block "js" %}
+  </body>
+</html>
+

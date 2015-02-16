@@ -1,0 +1,54 @@
+{% load sekizai_tags staticfiles %}
+
+<div id="slider_container" style="position: relative; top: 0px; left: 0px; margin:auto;">
+    <!-- Slides Container -->
+    <div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; ">
+        {% for photo in instance.photos.all %}
+            <div><img u="image" src="{{ photo.photo.url }}" /></div>
+
+        {% endfor %}
+                <!-- <div><img u="image" src="image2.jpg" /></div> -->
+    </div>
+</div>
+
+{% addtoblock 'js' %}<script type="text/javascript" src="{% static 'bower_components/jssor-slider/js/jssor.slider.mini.js'%}"></script>{% endaddtoblock %}
+{% addtoblock 'js' %}
+<script type="text/javascript">
+(function(){
+        var width = $("#maincontent").width();
+        console.log(width);
+        var height = width/20*7;
+
+        console.log(height);
+        $("#slider_container").css({
+            width: width,
+            height: height,
+        });
+        $("#slider_container>div").css({
+            width: width,
+            height: height,
+        });
+
+})()
+</script>
+{% endaddtoblock %}
+{% addtoblock 'js' %}
+<script type="text/javascript">
+    jQuery(document).ready(function ($) {
+        //Define an array of slideshow transition code
+        var _SlideshowTransitions = [
+            {$Duration:1400,x:0.25,$Zoom:1.5,$Easing:{$Left:$JssorEasing$.$EaseInWave,$Zoom:$JssorEasing$.$EaseInSine},$Opacity:2,$ZIndex:-10,$Brother:{$Durationtion:1400,x:-0.25,$Zoom:1.5,$Easing:{$Left:$JssorEasing$.$EaseInWave,$Zoom:$JssorEasing$.$EaseInSine},$Opacity:2,$ZIndex:-10}},
+        ];
+        var options = {
+            $AutoPlay: true,
+            $SlideshowOptions: {
+                    $Class: $JssorSlideshowRunner$,
+                    $Transitions: _SlideshowTransitions,
+                    $TransitionsOrder: 1,
+                    $ShowLink: true
+                }
+        };
+        var jssor_slider1 = new $JssorSlider$('slider_container', options);
+    });
+</script>
+{% endaddtoblock %}

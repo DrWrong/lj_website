@@ -1,0 +1,9 @@
+<ul class="nav nav-pills nav-stacked menu_nav">
+<li class="disable"><a href="#"><h2 class="text-muted">产品中心</h2></a></li>
+{% for item in instance.products.all %}
+<li role="presentation">
+    <a href="{{ item.url }}">{{ item.title }} </a>
+</li>
+{% endfor %}
+
+</ul>
