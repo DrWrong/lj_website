@@ -24,6 +24,7 @@ class ProductDisplayPlugin(CMSPluginBase):
     render_template = "product_display_plugin.html"
 
     def render(self, context, instance, placeholder):
+        context["instance"] = instance
         context["products"] = Products.objects.all()
         return context
 
