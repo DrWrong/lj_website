@@ -141,6 +141,7 @@ INSTALLED_APPS = (
     'mysite',
     'gallery',
     'sidemenu',
+    'panel',
     # 'image_gallery',
 )
 

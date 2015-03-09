@@ -71,8 +71,13 @@ padding: 25px;
 .partner_logo .cms_plugin{
     display: block;
     width: 20%;
-    margin: 0, 2px;
+    margin: 0 2px;
     float: left;
+}
+
+.panel-lj{
+    margin: 5px 5px;
+    min-height: 202px;
 }
 
 /*.menu_nav>li:hover{

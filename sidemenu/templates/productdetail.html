@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="panel panel-primary">
+<div class="panel-heading">
+    <h3 class="panel-title">
+        {{ object.title }}
+    </h3>
+</div>
+<div class="panel-body">
+    <div class="row">
+        <div class="col-xs-4">
+            <img width="100%" src="{{ object.img.url }}">
+        </div>
+        <div class="col-xs-8">
+            用途： <br>
+            特性：
+        </div>
+    </div>
+    <h3>产品详细介绍</h3>
+    <div>
+        {% autoescape off %}
+        {{ object.description }}
+        {% endautoescape %}
+    </div>
+
+</div>
+
+</div>
+
+
+{% endblock %}

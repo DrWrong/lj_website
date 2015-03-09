@@ -10,8 +10,8 @@
                 <!-- <div><img u="image" src="image2.jpg" /></div> -->
     </div>
 </div>
-
 {% addtoblock 'js' %}<script type="text/javascript" src="{% static 'bower_components/jssor-slider/js/jssor.slider.mini.js'%}"></script>{% endaddtoblock %}
+
 {% addtoblock 'js' %}
 <script type="text/javascript">
 (function(){
@@ -22,19 +22,19 @@
         console.log(height);
         $("#slider_container").css({
             width: width,
-            height: height,
-        });
+            height: height});
         $("#slider_container>div").css({
             width: width,
-            height: height,
-        });
+            height: height});
 
 })()
 </script>
 {% endaddtoblock %}
+
 {% addtoblock 'js' %}
 <script type="text/javascript">
     jQuery(document).ready(function ($) {
+
         //Define an array of slideshow transition code
         var _SlideshowTransitions = [
             {$Duration:1400,x:0.25,$Zoom:1.5,$Easing:{$Left:$JssorEasing$.$EaseInWave,$Zoom:$JssorEasing$.$EaseInSine},$Opacity:2,$ZIndex:-10,$Brother:{$Durationtion:1400,x:-0.25,$Zoom:1.5,$Easing:{$Left:$JssorEasing$.$EaseInWave,$Zoom:$JssorEasing$.$EaseInSine},$Opacity:2,$ZIndex:-10}},
