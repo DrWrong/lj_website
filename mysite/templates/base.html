@@ -38,7 +38,7 @@
       <div class="col-md-2 side_menu">
         {% static_placeholder "side_menu" %}
       </div>
-      <div class="col-md-10">
+      <div class="col-md-10" id="content">
     {% block content %}
     {% endblock content %}
       </div>
@@ -73,6 +73,7 @@
 </div>
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
     {% render_block "js" %}
   </body>
 </html>

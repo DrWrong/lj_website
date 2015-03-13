@@ -77,10 +77,19 @@ padding: 25px;
 
 .panel-lj{
     margin: 5px 5px;
-    min-height: 202px;
+    /*min-height: 202px;*/
 }
 
-/*.menu_nav>li:hover{
+/*.side_info{
+    margin-left: 4px;
+border-color: #428BCA;
+border: 1px solid transparent;
+border-color: #428BCA;
+margin-top: 5px;
+border-radius: 4px;
+padding-left: 13px;
+}
+*//*.menu_nav>li:hover{
 
 }
 */

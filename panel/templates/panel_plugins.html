@@ -1,7 +1,10 @@
 <div class="panel panel-primary panel-lj">
+    {% if instance.title %}
     <div class="panel-heading">
         <h3 class="panel-title">{{ instance.title }}</h3>
     </div>
+    {% endif %}
+
     <div class="panel-body">
         {%  autoescape off %}
         {{ instance.content }}
