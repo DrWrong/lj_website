@@ -22,9 +22,9 @@
     <div class="container-fluid" id="landing">
     </div>
     <div class="container-fluid">
-      <div class="navbar navbar-default" id="topnav" role="navigation">
+      <div class="navbar navbar-default " id="topnav" role="navigation">
         <div class="navbar-collapse collapse col-md-8 col-md-offset-2">
-          <ul class="nav navbar-nav">
+          <ul class="nav navbar-nav lj-nav">
             {% show_menu 0 1 100 100 "menu.html" %}
           </ul>
         </div>
@@ -73,8 +73,9 @@
 </div>
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
     {% render_block "js" %}
+    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+
   </body>
 </html>
 

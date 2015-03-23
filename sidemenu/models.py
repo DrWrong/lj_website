@@ -1,7 +1,8 @@
 from django.db import models
 from cms.models import CMSPlugin
 # from copy import deepcopy
-from djangocms_text_ckeditor.fields import HTMLField
+# from djangocms_text_ckeditor.fields import HTMLField
+from ckeditor.fields import RichTextField
 from django.core.urlresolvers import reverse
 # Create your models here.
 
@@ -44,7 +45,10 @@ class Products(models.Model):
     title = models.CharField(max_length=20)
     img = models.ImageField()
     slug = models.SlugField(unique=True)
-    description = HTMLField(blank=True)
+    description = RichTextField(blank=True)
+
+    def __str__(self):
+        return self.title
 
     @property
     def url(self):

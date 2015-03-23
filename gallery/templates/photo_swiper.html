@@ -1,0 +1,38 @@
+{% load sekizai_tags staticfiles %}
+
+<div class="panel panel-primary panel-lj">
+    <div class="panel-heading">
+        <h3 class="panel-title">{{ instance.title }}</h3>
+    </div>
+    <div class="panel-body">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                {% for item in instance.photos.all %}
+                    <div class="swiper-slide">
+                        <img width="100%" src="{{ item.photo.url }}">
+
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% addtoblock "css" %}
+<link rel="stylesheet" type="text/css" href="{% static 'bower_components/swiper/dist/css/swiper.min.css' %}">
+{% endaddtoblock %}
+{% addtoblock 'js' %}
+<script type="text/javascript" src="{% static 'bower_components/swiper/dist/js/swiper.jquery.min.js' %}"></script>
+{% endaddtoblock %}
+{% addtoblock 'js' %}
+<script type="text/javascript">
+ var swiper = new Swiper('.swiper-container', {
+// pagination: '.swiper-pagination',
+slidesPerView: 3,
+slidesPerColumn: 1,
+paginationClickable: true,
+spaceBetween: 30,
+autoplay: 800,
+speed: 500,
+});
+</script>
+{% endaddtoblock %}

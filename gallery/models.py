@@ -21,3 +21,18 @@ class Photos(models.Model):
     )
     photo = models.ImageField()
 
+
+class PhotoSwiper(CMSPlugin):
+    title = models.CharField(max_length=50, blank=True)
+    config = models.CharField(max_length=100, blank=True)
+
+    def copy_relations(self, oldinstance):
+        for photo in oldinstance.photos.all():
+            photo.pk = None
+            photo.plugin = self
+            photo.save()
+
+
+class SwiperPhoto(models.Model):
+    plugin = models.ForeignKey(PhotoSwiper, related_name="photos")
+    photo = models.ImageField()

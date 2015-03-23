@@ -114,7 +114,8 @@ TEMPLATE_DIRS = (
 
 INSTALLED_APPS = (
     'djangocms_admin_style',
-    'djangocms_text_ckeditor',
+    # 'djangocms_text_ckeditor',
+    'ckeditor',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -142,6 +143,7 @@ INSTALLED_APPS = (
     'gallery',
     'sidemenu',
     'panel',
+    'richtext'
     # 'image_gallery',
 )
 
@@ -178,10 +180,41 @@ CMS_PERMISSION = True
 
 CMS_PLACEHOLDER_CONF = {}
 
+CKEDITOR_UPLOAD_PATH = "uploads/"
+CKEDITOR_IMAGE_BACKEND = "pillow"
+CKEDITOR_JQUERY_URL = 'http://code.jquery.com/jquery.js'
+
+
 DATABASES = {
     'default':
         {'ENGINE': 'django.db.backends.sqlite3', 'NAME': 'project.db', 'HOST': 'localhost', 'USER': '', 'PASSWORD': '', 'PORT': ''}
 }
+
+CKEDITOR_CONFIGS = {
+    'default':
+    {
+        'toolbar': [
+            ['Source', '-', 'Preview', 'Maximize', 'ShowBlocks', ],
+            ['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', ],
+            ['Undo', 'Redo', '-', 'Find', 'Replace',
+                '-', 'SelectAll', 'RemoveFormat'],
+            ['Bold', 'Italic', 'Underline', 'Strike', ],
+            ['NumberedList', 'BulletedList', '-',
+                'Outdent', 'Indent', 'Blockquote'],
+            ['JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
+            ['Link', 'Unlink', 'Anchor'],
+            ['Image', 'Iframe', 'Flash', 'Table',
+                'HorizontalRule', 'Smiley', 'SpecialChar', 'Form'],
+            ['Styles', 'Format', 'Font', 'FontSize'],
+            ['TextColor', 'BGColor'],
+        ],
+        'height': 200,
+        'width': '95%',
+        'toolbarCanCollapse': False,
+    },
+}
+
+# TEXT_SAVE_IMAGE_FUNCTION = None
 
 MIGRATION_MODULES = {
     'cms': 'cms.migrations_django',
