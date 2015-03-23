@@ -33,9 +33,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 
-
-
-
 ROOT_URLCONF = 'mysite.urls'
 
 WSGI_APPLICATION = 'mysite.wsgi.application'
@@ -43,7 +40,6 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
-
 
 
 # Internationalization
@@ -148,12 +144,12 @@ INSTALLED_APPS = (
 )
 
 LANGUAGES = (
-    ## Customize this
+    # Customize this
     ('zh-cn', gettext('zh-cn')),
 )
 
 CMS_LANGUAGES = {
-    ## Customize this
+    # Customize this
     'default': {
         'public': True,
         'hide_untranslated': False,
@@ -171,7 +167,7 @@ CMS_LANGUAGES = {
 }
 
 CMS_TEMPLATES = (
-    ## Customize this
+    # Customize this
     ('page.html', 'Page'),
     ('feature.html', 'Page with Feature')
 )
@@ -187,7 +183,13 @@ CKEDITOR_JQUERY_URL = 'http://code.jquery.com/jquery.js'
 
 DATABASES = {
     'default':
-        {'ENGINE': 'django.db.backends.sqlite3', 'NAME': 'project.db', 'HOST': 'localhost', 'USER': '', 'PASSWORD': '', 'PORT': ''}
+        {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'bdlj',
+            'HOST': 'bdlj.drwrong.tk',
+            'USER': 'bdlj',
+            'PASSWORD': 'bdlj',
+        }
 }
 
 CKEDITOR_CONFIGS = {
