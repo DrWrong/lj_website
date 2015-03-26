@@ -9,9 +9,15 @@
             <div class="swiper-wrapper">
                 {% for item in products %}
                     <div class="swiper-slide">
-                        <img width="100%" src="{{ item.img.url }}">
-                        {{ item.title }}
-                        <a href="{{ item.url }}">更多</a>
+                        <a class="product_link" href="{{ item.url }}">
+                            <div class="product_img">
+                                <img width="100%"  src="{{ item.img.url }}">
+                            </div>
+                            <div class="product_title">
+                                {{ item.title }}
+                            </div>
+
+                        </a>
                     </div>
                 {% endfor %}
             </div>
