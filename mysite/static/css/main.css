@@ -87,11 +87,14 @@ padding: 25px;
 
 .partner_logo .cms_plugin{
     display: block;
-    width: 20%;
-    margin: 0 2px;
+    width: 150px;
+    /*margin: 0 2px;*/
     float: left;
 }
 
+.partner_logo img{
+    width:150px;
+}
 .panel-lj{
     margin: 5px 5px;
     /*min-height: 202px;*/
