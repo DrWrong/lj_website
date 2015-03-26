@@ -7,16 +7,9 @@
     </h3>
 </div>
 <div class="panel-body">
-    <div class="row">
-        <div class="col-xs-4">
-            <img width="100%" src="{{ object.img.url }}">
-        </div>
-        <div class="col-xs-8">
-            用途： <br>
-            特性：
-        </div>
+    <div>
+        <img src="{{ object.img.url }}">
     </div>
-    <h3>产品详细介绍</h3>
     <div>
         {% autoescape off %}
         {{ object.description }}
