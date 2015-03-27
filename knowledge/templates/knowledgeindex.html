@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+    <ol class="breadcrumb">
+    <li><a href="/">首页</a></li>
+    <li class="active">专业知识</li>
+    </ol>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">专业知识</h3>
+        </div>
+        <ul class="list-group">
+            {% for object in object_list %}
+                <li class="list-group-item">
+                    <div class="row">
+                    <div class="col-md-8">
+                        <a href="{{ object.get_absolute_url }}">
+                            {{ object.title }}
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        {{ object.update_time }}
+                    </div>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

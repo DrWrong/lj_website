@@ -141,6 +141,8 @@ INSTALLED_APPS = (
     'panel',
     'richtext',
     'news',
+    'knowledge',
+    'solutions',
     # 'image_gallery',
 )
 
