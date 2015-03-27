@@ -1,0 +1,28 @@
+<div class="panel panel-primary">
+<div class="panel-heading">
+    <h3 class="panel-title">
+    最新资讯
+    <div class="pull-right">
+        <a href="/news">更多</a>
+    </div>
+    </h3>
+</div>
+<table class="table">
+    <tbody>
+        {% for object in news %}
+            <tr>
+                <td class="news_title">{{ object.title }}</td>
+                <td class="news_abstract">{{ object.abstract }}</td>
+                <td class="news_updatetime">{{ object.update_time }}</td>
+                <td> <a class="news_link" href="{{ object.get_absolute_url }}">详情</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<!-- <div class="panel-footer">
+    <div class="col-md-2 pull-right">
+
+    </div>
+</div> -->
+</div>

@@ -8,13 +8,17 @@
     /*padding-top: 146px;*/
 }
 
-#topnav{
+#topnav, #topnav .dropdown-menu{
     /*background:linear-gradient(#DDF2F3, #FFFFFF 50%, #DDF2F3);*/
     box-shadow: 2px;
     background-color: #428BCA;
     background-image: linear-gradient(to bottom, #428BCA 0px, #357EBD 100%);
     background-repeat: repeat-x;
 }
+
+/*#topnav .dropdown-menu{
+    background-color:
+}*/
 
 #topnav li a,.nav  li a {
     color: white;
@@ -109,6 +113,14 @@ padding: 25px;
     text-decoration: none;
 }
 
+
+.panel-lj .panel-title a{
+    color: white;
+}
+
+.news_content h2{
+    text-align: center;
+}
 /*.plugin_picture>img{
     width:100%;
 }

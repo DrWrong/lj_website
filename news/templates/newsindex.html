@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+ <ol class="breadcrumb">
+    <li><a href="/">首页</a></li>
+    <li class="active">新闻咨讯</li>
+</ol>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>标题</th>
+            <th>摘要</th>
+            <th>更新时间</th>
+            <th>创建时间</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for object in object_list %}
+        <tr>
+            <td><a href="{{ object.get_absolute_url }}">{{ object.title }}</a></td>
+            <td>{{ object.abstract }}</td>
+            <td>{{ object.update_time }}</td>
+            <td>{{ object.create_time }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

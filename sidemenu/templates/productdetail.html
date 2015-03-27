@@ -1,5 +1,12 @@
 {% extends "base.html" %}
+{% load sekizai_tags %}
+
 {% block content %}
+<ol class="breadcrumb">
+    <li><a href="/">首页</a></li>
+    <li><a href="/product">产品中心</a></li>
+    <li class="active">{{ object.title }}</li>
+</ol>
 <div class="panel panel-primary">
 <div class="panel-heading">
     <h3 class="panel-title">
@@ -20,5 +27,9 @@
 
 </div>
 
-
 {% endblock %}
+{% addtoblock "js" %}
+<script type="text/javascript">
+    $("#product-{{ object.slug }}").addClass("active");
+</script>
+{% endaddtoblock %}

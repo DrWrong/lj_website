@@ -139,7 +139,8 @@ INSTALLED_APPS = (
     'gallery',
     'sidemenu',
     'panel',
-    'richtext'
+    'richtext',
+    'news',
     # 'image_gallery',
 )
 
@@ -169,7 +170,8 @@ CMS_LANGUAGES = {
 CMS_TEMPLATES = (
     # Customize this
     ('page.html', 'Page'),
-    ('feature.html', 'Page with Feature')
+    ('feature.html', 'Page with Feature'),
+    ("home.html", "home page"),
 )
 
 CMS_PERMISSION = True

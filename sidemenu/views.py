@@ -2,6 +2,7 @@
 from django.views.generic import ListView, DetailView
 from .models import Products
 
+
 class ProductIndexView(ListView):
     model = Products
     template_name = "productindex.html"
