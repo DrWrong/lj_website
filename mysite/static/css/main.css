@@ -32,6 +32,7 @@
 #partner{
     margin-bottom: 20px;
     padding-bottom: 20px;
+    border-top: solid #F5F5F5;
 }
 
 #topnav li:hover{
