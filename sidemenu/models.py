@@ -52,7 +52,7 @@ class Products(models.Model):
         return self.title
 
     class Meta:
-        ordering = ["-order"]
+        ordering = ["order"]
 
     @property
     def url(self):
