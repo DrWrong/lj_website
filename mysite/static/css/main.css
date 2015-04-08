@@ -138,3 +138,6 @@ padding-left: 13px;
 
 }
 */
+.swiper-slide {
+    margin: 5px 0;
+}
