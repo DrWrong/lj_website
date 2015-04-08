@@ -46,9 +46,13 @@ class Products(models.Model):
     img = models.ImageField()
     slug = models.SlugField(unique=True)
     description = RichTextField(blank=True)
+    order = models.PositiveSmallIntegerField(default=0)
 
     def __str__(self):
         return self.title
+
+    class Meta:
+        ordering = ["-order"]
 
     @property
     def url(self):
