@@ -5,41 +5,17 @@
         <h3 class="panel-title">{{ instance.title }}</h3>
     </div>
     <div class="panel-body">
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                {% for item in products %}
-                    <div class="swiper-slide">
-                        <a class="product_link" href="{{ item.url }}">
-                            <div class="product_img">
-                                <img width="100%"  src="{{ item.img.url }}">
-                            </div>
-                            <div class="product_title">
-                                {{ item.title }}
-                            </div>
-
-                        </a>
+        {% for item in products %}
+            <div class="swiper-slide col-md-3">
+                <a class="product_link" href="{{ item.url }}">
+                    <div class="product_img">
+                        <img width="100%"  src="{{ item.img.url }}">
                     </div>
-                {% endfor %}
+                    <div class="product_title">
+                        {{ item.title }}
+                    </div>
+                </a>
             </div>
-        </div>
+        {% endfor %}
     </div>
 </div>
-{% addtoblock "css" %}
-<link rel="stylesheet" type="text/css" href="{% static 'bower_components/swiper/dist/css/swiper.min.css' %}">
-{% endaddtoblock %}
-{% addtoblock 'js' %}
-<script type="text/javascript" src="{% static 'bower_components/swiper/dist/js/swiper.jquery.min.js' %}"></script>
-{% endaddtoblock %}
-{% addtoblock 'js' %}
-<script type="text/javascript">
- var swiper = new Swiper('.swiper-container', {
-// pagination: '.swiper-pagination',
-slidesPerView: 3,
-slidesPerColumn: 4,
-paginationClickable: true,
-spaceBetween: 30,
-autoplay: 800,
-speed: 500,
-});
-</script>
-{% endaddtoblock %}
