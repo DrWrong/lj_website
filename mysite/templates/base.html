@@ -32,6 +32,7 @@
     </div>
 
 <div class="main">
+
     <div class="container" id="maincontent">
     {% static_placeholder "slider" %}
     <dic class="row">
@@ -39,6 +40,11 @@
         {% static_placeholder "side_menu" %}
       </div>
       <div class="col-md-10" id="content">
+      {% block breadcrumb %}
+      <ol class="breadcrumb">
+      {%  show_breadcrumb 0 "breadcrumb.html" %}
+      </ol>
+      {% endblock %}
     {% block content %}
     {% endblock content %}
       </div>
