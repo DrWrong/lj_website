@@ -20,8 +20,7 @@
     background-color:
 }*/
 
-
-$topnav li a:hover{
+#topnav li a:hover{
     color: black;
 }
 
@@ -78,10 +77,11 @@ padding: 25px;
     background-repeat: repeat-x;
 }
 
-/*.menu_nav>li.disable h2{
+.menu_nav li.disabled h2{
     color: black;
+    font-weight: bold;
 }
-*/
+
 /*li>a{
     color: white;
     font-weight: bold;
