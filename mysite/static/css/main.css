@@ -20,6 +20,11 @@
     background-color:
 }*/
 
+
+$topnav li a:hover{
+    color: black;
+}
+
 #topnav li a,.nav  li a {
     color: white;
     font-weight: bold;
