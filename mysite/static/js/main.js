@@ -25,9 +25,9 @@ $("#qq-tools-show").click(function(){
  });
 for(var i=0;i<online.length;i++){
     if(online[i]==1){
-        $('.qq-rides-cs ul li:eq('+i+')').find('img').attr('src','images/qqonline.png');;
+        $('.qq-rides-cs ul li:eq('+i+')').find('img').attr('src','/static/image/qqonline.png');;
     }else {
-        $('.qq-rides-cs li:eq('+i+')').find('img').attr('src','images/qqoffline.png');
+        $('.qq-rides-cs li:eq('+i+')').find('img').attr('src','/static/image/qqoffline.png');
     }
 }
 })(jQuery);
