@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
     <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/qqcs.css' %}">
+
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -77,8 +79,28 @@
 
 </div>
 </div>
+<div id="qq-tools" class="qq-rides-cs">
+  <div class="qq-tools-l">
+    <a id="qq-tools-show" class="qq-tools-open" title="查看在线客服" style="display:block" href="javascript:void(0);">展开</a>
+    <a id="qq-tools-hide" class="qq-tools-close" title="关闭在线客服" style="display:none" href="javascript:void(0);">收缩</a>
+  </div>
+  <div class="qq-tools-r" style="width: 140px;">
+    <div class="cn">
+      <h3 class="titZx">商城在线客服</h3>
+      <ul>
+        <li><span>客服</span> <a href="tencent://message/?Menu=yes&uin=260851801&Site=csqq"><img border="0" alt="点击这里给我发消息" title="点击这里给我发消息"/></a> </li>
+        <li><span>客服</span> <a href="tencent://message/?Menu=yes&uin=3070047023&Site=csqq"><img border="0" alt="点击这里给我发消息" title="点击这里给我发消息"/></a> </li>
+        <li style="border:none;"><span>电话：011-5654521</span> </li>
+      </ul>
+    </div>
+  </div>
+</div>
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      var online = new Array();
+    </script>
+    <script type= "text/javascript" src="http://webpresence.qq.com/getonline?Type=1&260851801:3070047023:"></script>
     {% render_block "js" %}
     <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
 

@@ -13,4 +13,21 @@ $('.dropdown').hover(function() {
   // console.log('hover');
   $(this).children('.dropdown-toggle').dropdown("toggle");
 })
+$("#qq-tools-show").click(function(){
+    $('#qq-tools').animate({right:'0'});
+    $('#qq-tools-show').hide();
+    $('#qq-tools-hide').show();
+});
+ $("#qq-tools-hide").click(function(){
+    $('#qq-tools').animate({right:'-150px'});
+    $('#qq-tools-show').show();
+    $('#qq-tools-hide').hide();
+ });
+for(var i=0;i<online.length;i++){
+    if(online[i]==1){
+        $('.qq-rides-cs ul li:eq('+i+')').find('img').attr('src','images/qqonline.png');;
+    }else {
+        $('.qq-rides-cs li:eq('+i+')').find('img').attr('src','images/qqoffline.png');
+    }
+}
 })(jQuery);
