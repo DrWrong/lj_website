@@ -53,7 +53,16 @@
     </dic>
 
     </div>
-    <div class="container" id="partner">
+    <div class="container" id="visit_info">
+      <h2 class="text-muted">访客信息</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <p class="text-info">当前在线人数{{ online_user }}</p>
+        </div>
+      </div>
+    </div>
+
+ <div class="container" id="partner">
     <h2 class="text-muted">合作伙伴</h2>
     <div class="partner_logo">
       {% static_placeholder "partner" %}
