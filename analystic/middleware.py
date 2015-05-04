@@ -14,7 +14,7 @@ class IpAnalysticMiddleware(object):
                 visit_time__gte=timezone.now() - timedelta(minutes=5)
             ).get(ip_address=ip)
         except ObjectDoesNotExist:
-            UserIpInfo.object.create(ip_address=ip)
+            UserIpInfo.objects.create(ip_address=ip)
 
     def get_ip_address(self, request):
         x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
