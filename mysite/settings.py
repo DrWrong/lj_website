@@ -87,7 +87,9 @@ MIDDLEWARE_CLASSES = (
     'cms.middleware.user.CurrentUserMiddleware',
     'cms.middleware.page.CurrentPageMiddleware',
     'cms.middleware.toolbar.ToolbarMiddleware',
-    'cms.middleware.language.LanguageCookieMiddleware'
+    'cms.middleware.language.LanguageCookieMiddleware',
+    'analystic.middleware.IpAnalysticMiddleware',
+    'analystic.middleware.OnlineMemberMiddleware',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
@@ -101,7 +103,8 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.tz',
     'sekizai.context_processors.sekizai',
     'django.core.context_processors.static',
-    'cms.context_processors.cms_settings'
+    'cms.context_processors.cms_settings',
+    'analystic.context_processors.website_static',
 )
 
 TEMPLATE_DIRS = (
