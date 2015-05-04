@@ -18,4 +18,4 @@ class UserIpInfo(models.Model):
     def protected_ip(self):
         parts = self.ip_address.split(".")
         parts = parts[:3]
-        return parts.join(".") + ".*"
+        return ".".join(parts) + ".*"
