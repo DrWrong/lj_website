@@ -143,6 +143,7 @@ INSTALLED_APPS = (
     'news',
     'knowledge',
     'solutions',
+    'analystic',
     # 'image_gallery',
 )
 
