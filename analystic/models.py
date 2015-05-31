@@ -1,5 +1,5 @@
 from django.db import models
-
+import requests
 # Create your models here.
 
 
@@ -9,6 +9,12 @@ class UserIpInfo(models.Model):
     visit_time = models.DateTimeField(auto_now_add=True)
 
     def get_real_address(self):
+        r = requests.get(
+            "http://ip.taobao.com//service/getIpInfo.php",
+            params={"ip": self.ip_address})
+        res = r.json()
+        if res["code"] == "0":
+            return res["city"]
         return "Unknown"
 
     def before_save(self):
