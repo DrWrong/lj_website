@@ -6,6 +6,6 @@ def website_static(request):
     context = {
         "online_user": len(online_user),
         "total_number": UserIpInfo.objects.count(),
-        "recent_users": UserIpInfo.objects.order_by("-id")[:10]
+        "recent_users": UserIpInfo.objects.order_by("-id")[:3]
     }
     return context
