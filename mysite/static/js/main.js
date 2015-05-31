@@ -30,6 +30,6 @@ for(var i=0;i<online.length;i++){
         $('.qq-rides-cs li:eq('+i+')').find('img').attr('src','/static/image/qqoffline.png');
     }
 }
-height = $(".proudct_img img")[0].height();
+height = $(".product_img img")[0].height();
 $(".product_img img").height(height);
 })(jQuery);
