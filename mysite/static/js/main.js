@@ -1,5 +1,8 @@
 ;(function($){
-var height = $("#content").height();
+var  height = $(".product_img img")[0].height;
+$(".product_img img").height(height);
+
+height = $("#content").height();
 $(".side_menu").css({
     "min-height": height + "px"
 });
@@ -30,6 +33,4 @@ for(var i=0;i<online.length;i++){
         $('.qq-rides-cs li:eq('+i+')').find('img').attr('src','/static/image/qqoffline.png');
     }
 }
-height = $(".product_img img")[0].height;
-$(".product_img img").height(height);
 })(jQuery);
