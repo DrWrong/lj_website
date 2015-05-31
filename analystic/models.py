@@ -13,7 +13,7 @@ class UserIpInfo(models.Model):
             "http://ip.taobao.com//service/getIpInfo.php",
             params={"ip": self.ip_address})
         res = r.json()
-        if res["code"] == "0":
+        if res["code"] == 0:
             return res["city"]
         return "Unknown"
 
