@@ -14,7 +14,7 @@ class UserIpInfo(models.Model):
             params={"ip": self.ip_address})
         res = r.json()
         if res["code"] == 0:
-            return res["city"]
+            return res["data"]["city"]
         return "Unknown"
 
     def before_save(self):
