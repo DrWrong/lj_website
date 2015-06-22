@@ -54,28 +54,30 @@
 
     </div>
     <div class="container" id="visit_info">
-      <h2 class="text-muted">访客信息</h2>
-      <div class="col-md-6">
-       <table class="table">
-         <tbody>
-           {% for user in recent_users %}
-              <tr>
-               <td>{{ user.visit_time }}</td>
-                <td>{{ user.protected_ip }}</td>
-                <td>{{ user.get_real_address }}</td>
-              </tr>
-           {% endfor %}
-         </tbody>
-         <tfoot>
-
         <p>
           <span class="text-info">当前在线人数 {{ online_user }} 人</span>
           <span class="text-success">历史在线人数 {{ total_number }} 人</span>
         </p>
-         </tfoot>
-       </table>
-
-      </div>
+      <!---------------------------------------------------->
+      <!-- <h2 class="text-muted">访客信息</h2>           -->
+      <!-- <div class="col-md-6">                         -->
+      <!--  <table class="table">                         -->
+      <!--    <tbody>                                     -->
+      <!--      {% for user in recent_users %}            -->
+      <!--         <tr>                                   -->
+      <!--          <td>{{ user.visit_time }}</td>        -->
+      <!--           <td>{{ user.protected_ip }}</td>     -->
+      <!--           <td>{{ user.get_real_address }}</td> -->
+      <!--         </tr>                                  -->
+      <!--      {% endfor %}                              -->
+      <!--    </tbody>                                    -->
+      <!--    <tfoot>                                     -->
+      <!--                                                -->
+      <!--    </tfoot>                                    -->
+      <!--  </table>                                      -->
+      <!--                                                -->
+      <!-- </div>                                         -->
+      <!---------------------------------------------------->
     </div>
 
  <div class="container" id="partner">
