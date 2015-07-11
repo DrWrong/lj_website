@@ -23,11 +23,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = '#^-7&uwuea$f2+6&$@0bay2+p&z3)*wmjp^fs+xf1%c9+&-vmj'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-TEMPLATE_DEBUG = True
+TEMPLATE_DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["bdlj.com", "www.bdlj.com", "203.88.170.17"]
 
 
 # Application definition
@@ -49,7 +49,7 @@ LANGUAGE_CODE = 'zh-cn'
 
 TIME_ZONE = 'Asia/Shanghai'
 
-USE_I18N = True
+USE_I18N = False
 
 USE_L10N = True
 
@@ -152,7 +152,7 @@ INSTALLED_APPS = (
 
 LANGUAGES = (
     # Customize this
-    ('zh-cn', gettext('zh-cn')),
+     ('zh-cn', gettext('zh-cn')),
 )
 
 CMS_LANGUAGES = {
@@ -194,7 +194,7 @@ DATABASES = {
         {
             'ENGINE': 'django.db.backends.mysql',
             'NAME': 'bdlj',
-            'HOST': 'bdlj.drwrong.tk',
+            'HOST': 'localhost',
             'USER': 'bdlj',
             'PASSWORD': 'bdlj',
         }
@@ -240,4 +240,22 @@ MIGRATION_MODULES = {
     'djangocms_picture': 'djangocms_picture.migrations_django',
     'djangocms_teaser': 'djangocms_teaser.migrations_django',
     'djangocms_video': 'djangocms_video.migrations_django'
+}
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': '/var/www/bdlj/logs/django/debug.log',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['file'],
+            'level': 'DEBUG',
+            'propagate': False,
+        },
+    },
 }

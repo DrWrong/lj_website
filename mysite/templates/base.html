@@ -34,10 +34,11 @@
     </div>
 
 <div class="main">
-
-    <div class="container" id="maincontent">
+   <div class="container" id="slider">
     {% static_placeholder "slider" %}
-    <dic class="row">
+   </div>
+   <div class="container" id="maincontent">
+    <div class="row">
       <div class="col-md-2 side_menu">
         {% static_placeholder "side_menu" %}
       </div>
@@ -50,8 +51,7 @@
     {% block content %}
     {% endblock content %}
       </div>
-    </dic>
-
+    </div>
     </div>
     <div class="container" id="visit_info">
         <p>

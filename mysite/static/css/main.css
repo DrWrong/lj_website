@@ -1,3 +1,6 @@
+#slider {
+   margin-bottom: 22px;
+}
 #landing{
     background-image: url(/static/image/top.jpg);
     /*filter:alpha(opacity=30);*/
